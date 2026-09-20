@@ -1,0 +1,6 @@
+{
+  "name": "Mini Arcade",
+  "description": "Play 5 complete mini games: Neon Snake, 2048 Puzzle, Color Reflex, Space Dodger, and Word Scramble with leaderboards and stats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
