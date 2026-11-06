@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Gamepad Body centered around (54, 54) -->
+    <!-- Base pill-shaped controller -->
+    <path
+        android:pathData="M34,40 C25,40 22,48 22,57 C22,67 27,74 36,74 C41,74 46,70 50,65 L58,65 C62,70 67,74 72,74 C81,74 86,67 86,57 C86,48 83,40 74,40 Z"
+        android:fillColor="#1E1E38" />
+    
+    <!-- Controller Highlight border -->
+    <path
+        android:pathData="M34,40 C25,40 22,48 22,57 C22,67 27,74 36,74 C41,74 46,70 50,65 L58,65 C62,70 67,74 72,74 C81,74 86,67 86,57 C86,48 83,40 74,40 Z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#7B2CBF" />
+
+    <!-- D-Pad Left Side (Cyan / Violet) -->
+    <!-- Horizontal arm -->
+    <path
+        android:pathData="M29,54 L41,54"
+        android:strokeWidth="4"
+        android:strokeColor="#00F0FF"
+        android:strokeLineCap="round" />
+    <!-- Vertical arm -->
+    <path
+        android:pathData="M35,48 L35,60"
+        android:strokeWidth="4"
+        android:strokeColor="#00F0FF"
+        android:strokeLineCap="round" />
+
+    <!-- Action Buttons Right Side (Vibrant neon dots) -->
+    <!-- Top (Amber) -->
+    <path
+        android:pathData="M73,48m-2.2,0a2.2,2.2 0 1,0 4.4,0a2.2,2.2 0 1,0 -4.4,0"
+        android:fillColor="#FFD166" />
+    <!-- Bottom (Emerald) -->
+    <path
+        android:pathData="M73,60m-2.2,0a2.2,2.2 0 1,0 4.4,0a2.2,2.2 0 1,0 -4.4,0"
+        android:fillColor="#06D6A0" />
+    <!-- Left (Pink) -->
+    <path
+        android:pathData="M67,54m-2.2,0a2.2,2.2 0 1,0 4.4,0a2.2,2.2 0 1,0 -4.4,0"
+        android:fillColor="#EF476F" />
+    <!-- Right (Cyan) -->
+    <path
+        android:pathData="M79,54m-2.2,0a2.2,2.2 0 1,0 4.4,0a2.2,2.2 0 1,0 -4.4,0"
+        android:fillColor="#118AB2" />
+
+    <!-- Center Arcade Crown / Star / Mini buttons -->
+    <path
+        android:pathData="M51,52 L47,52 M61,52 L57,52"
+        android:strokeWidth="1.8"
+        android:strokeColor="#C77DFF"
+        android:strokeLineCap="round" />
+
+    <!-- Top mini neon star icon -->
+    <path
+        android:pathData="M54,28 L55.5,33 L60.5,33.5 L56.5,36.8 L58,41.8 L54,38.5 L50,41.8 L51.5,36.8 L47.5,33.5 L52.5,33 Z"
+        android:fillColor="#FFD166" />
+
+</vector>
