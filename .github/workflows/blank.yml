@@ -3,7 +3,7 @@ name: Build Android APK
 on:
   push:
     branches: [ main ]
-<<<<<<< HEAD
+    <<<<<<< HEAD
 
 jobs:
   build:
@@ -26,8 +26,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-
-<<<<<<< HEAD
+        <<<<<<< HEAD
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
@@ -61,7 +60,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-<<<<<<< HEAD
+        <<<<<<< HEAD
         path: app/build/outputs/apk/debug/app-debug.apk
 =======
         path: "**/build/outputs/apk/debug/*.apk"
