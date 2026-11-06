@@ -3,65 +3,47 @@ name: Build Android APK
 on:
   push:
     branches: [ main ]
-    <<<<<<< HEAD
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-=======
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
->>>>>>> 6be8491e6d425912ff2c0f9f0865b37305fb5d33
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-        <<<<<<< HEAD
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
-=======
-    - name: Install SDK platform and build tools
-      run: |
-        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+      - name: Install SDK platform and build tools
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
-      with:
-        gradle-version: 9.3.1
-    
-    - name: Create debug keystore
-      run: |
-        keytool -genkeypair -v \
-          -keystore debug.keystore \
-          -storepass android -keypass android \
-          -alias androiddebugkey \
-          -keyalg RSA -keysize 2048 -validity 10000 \
-          -dname "CN=Android Debug,O=Android,C=US"
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 9.3.1
+      
+      - name: Create debug keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore debug.keystore \
+            -storepass android -keypass android \
+            -alias androiddebugkey \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
           
-    - name: Build Debug APK
-      run: gradle assembleDebug --stacktrace
->>>>>>> 6be8491e6d425912ff2c0f9f0865b37305fb5d33
+      - name: Build Debug APK
+        run: gradle assembleDebug --stacktrace
 
-    - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: app-debug
-        <<<<<<< HEAD
-        path: app/build/outputs/apk/debug/app-debug.apk
-=======
-        path: "**/build/outputs/apk/debug/*.apk"
->>>>>>> 6be8491e6d425912ff2c0f9f0865b37305fb5d33
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: "**/build/outputs/apk/debug/*.apk"
